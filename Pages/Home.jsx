@@ -9,72 +9,56 @@ const Home = () => {
   const data = {
     info: "Hi, I'm",
     role: "Full Stack Developer",
-    Details: `I craft digital experiences that blend creativity with functionality."
-    "Passionate about building scalable web applications using modern technologies"
-    "and turning ideas into reality through clean, efficient code.`,
+    Details: `I craft digital experiences that blend creativity with functionality. Passionate about building scalable web applications using modern technologies and turning ideas into reality through clean, efficient code.`,
   };
 
-  const socialMedia=[
-    {
-      icon: <LuGithub />,
-      href:"https://github.com/riyatiwari002",
-      label:"Github"
-    },
-    {
-      icon:   <FiLinkedin />,
-      href:"https://www.linkedin.com/in/riya-tiwari-7a051b280/",
-      label:"Linkedin"
-    },
-    {
-      icon:  <MdOutlineMailOutline />,
-      href:"mailto:rtiyatiwari2626@gmail.com",
-      label:"Email"
-    },
+  const socialMedia = [
+    { icon: <LuGithub />, href: "https://github.com/riyatiwari002", label: "Github" },
+    { icon: <FiLinkedin />, href: "https://www.linkedin.com/in/riya-tiwari-7a051b280/", label: "Linkedin" },
+    { icon: <MdOutlineMailOutline />, href: "mailto:rtiyatiwari2626@gmail.com", label: "Email" },
+  ];
 
-
-  ]
-  // bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent
   return (
-    <div>
-      <div className="flex justify-around pt-40 bg-linear-to-l bg-blue-50 via-white-100 py-10">
-        <div className="w-160">
-          <h1 className="text-6xl font-semibold ">
-            <span> {data.info} </span>
-            <span className="text-7xl font-semibold bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+    <div id="home">
+      <div className="flex flex-col lg:flex-row justify-center lg:justify-around items-center pt-20 lg:pt-40 bg-linear-to-l from-blue-50 to-white py-10 px-4 lg:px-0">
+        <div className="w-full lg:w-1/2 xl:w-160 text-center lg:text-left px-4 lg:px-0 mb-10 lg:mb-0">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold">
+            <span>{data.info} </span>
+            <span className="text-5xl md:text-6xl lg:text-7xl font-semibold bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent block mt-2">
               Riya Tiwari
             </span>
           </h1>
-          <h3 className="font-semibold mt-5 text-3xl text-gray-700">
+          <h3 className="font-semibold mt-5 text-2xl md:text-3xl text-gray-700">
             {data.role}
           </h3>
-          <p className="h-1 bg-linear-to-r bg-orange-500 via-purple-500 to-white-500  w-70"></p>
-          <p className="text-gray-500  mt-10 text-xl">{data.Details}</p>
-          <div className="flex gap-10 mt-10">
-            <button className="bg-linear-to-r bg-blue-500 via-purple-500 to-pink-500 w-auto rounded-2xl flex px-7 py-2 items-center gap-2 text-white font-semibold  shadow-2xl hover:bg-lienar-to-r hover:bg-yellow-500 hover:via-green-500 hover:to-red-500 hover:text-whie transition duration-300 transform  hover:translate-y-0.5">
+          <p className="h-1 bg-linear-to-r from-orange-500 via-purple-500 to-white w-full lg:w-70 mt-4"></p>
+          <p className="text-gray-500 mt-6 lg:mt-10 text-lg md:text-xl leading-relaxed">
+            {data.Details}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-10 mt-8">
+            <button className="border border-blue-700 shadow-2xl rounded-2xl flex justify-center items-center gap-2 px-6 py-3 text-blue-700 font-semibold  rounded-2xl flex justify-center items-center gap-2 px-6 py-3 hover:text-white font-semibold shadow-2xl hover:shadow-lg transition duration-300 w-full sm:w-auto hover:bg-linear-to-r hover:from-blue-500 hover:via-purple-500 hover:to-pink-500">
               <MdOutlineMailOutline /> Hire Me
             </button>
-            <button className="border border-blue-700 w-auto shadow-2xl rounded-2xl flex items-center gap-2 px-7 py-2   text-blue-700 font-semibold  hover:bg-linear-to-r hover:bg-blue-500 hover: via-purple-500 hover:to-pink-500 hover:text-white transition duration-300 transform hover:translate-y-0.5">
+            <a href="./src/assets/riyaFullStack.pdf" download className="inline-block">
+            <button className="border border-blue-700 shadow-2xl rounded-2xl flex justify-center items-center gap-2 px-6 py-3 text-blue-700 font-semibold hover:bg-linear-to-r hover:from-blue-500 hover:via-purple-500 hover:to-pink-500 hover:text-white transition duration-300 w-full sm:w-auto">
               <LuDownload />
               Download Resume
             </button>
+            </a>
           </div>
-          <div className="flex  gap-10 text-3xl mt-10">
-          
-         
-           {socialMedia.map((item)=>
-           <p className="h-14 w-14 bg-gray-300 rounded-full flex justify-center items-center hover:scale-110 transition-transform duration-300 cursor-pointer">
-           <a href={item.href} aria-label={item.label}>{item.icon}</a>
-             </p>
-          )}
-         
-         
+          <div className="flex justify-center lg:justify-start gap-6 md:gap-10 text-3xl mt-8">
+            {socialMedia.map((item, index) => (
+              <p key={index} className="h-12 w-12 md:h-14 md:w-14 bg-gray-300 rounded-full flex justify-center items-center hover:scale-110 transition-transform duration-300 cursor-pointer">
+                <a href={item.href} aria-label={item.label}>{item.icon}</a>
+              </p>
+            ))}
           </div>
         </div>
-        <div className="w-80 h-80 rounded-full shadow-2xl flex justify-center items-center">
+        <div className="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-2xl flex justify-center items-center">
           <img
             src={profile}
-            alt="profile-error"
-            className="w-80 h-80 rounded-full object-cover hover:rotate-360 transition-transform duration-300 ease-in-out"
+            alt="profile"
+            className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover hover:rotate-360 transition-transform duration-300 ease-in-out"
           />
         </div>
       </div>
