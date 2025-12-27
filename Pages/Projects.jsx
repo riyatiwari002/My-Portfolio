@@ -4,7 +4,6 @@ import toDoList from "../../public/to-do-list.png";
 import quiz from "../../public/quiz.png";
 import weather from "../../public/weather.png";
 import { LuGithub } from "react-icons/lu";
-import project from "../../public/project.png";
 import { CiShare1 } from "react-icons/ci";
 
 const Projects = () => {
@@ -43,7 +42,7 @@ This project demonstrates React skills, dynamic UI updates, and component-based 
     },
     {
       image: weather,
-      projectName: "cWeather-App",
+      projectName: "Weather-App",
       description: `Weather App is a responsive web application built using HTML, CSS, and JavaScript (or React).
 It provides real-time weather updates based on user location or searched cities.
 The app showcases dynamic API integration, responsive design, and interactive UI.`,
@@ -53,44 +52,7 @@ The app showcases dynamic API integration, responsive design, and interactive UI
     },
   ];
 
-  const cloneInfo = [
-    {
-      image: project,
-      projectName: "student management",
-      description: "lorem1sdfyuiop;';lkjhgfghjkkjhgfgh",
-      technology: ["HTML", "CSS"],
-    },
-    {
-      image: project,
-      projectName: "gas management",
-      description: "lorem1sdfyuiop;';lkjhgfghjkkjhgfgh",
-      technology: ["HTML", "CSS"],
-    },
-    {
-      image: project,
-      projectName: "popcorm management",
-      description: "lorem1sdfyuiop;';lkjhgfghjkkjhgfgh",
-      technology: ["HTML", "CSS"],
-    },
-    {
-      image: project,
-      projectName: "car management",
-      description: "lorem1sdfyuiop;';lkjhgfghjkkjhgfgh",
-      technology: ["HTML", "CSS"],
-    },
-    {
-      image: project,
-      projectName: "car management",
-      description: "lorem1sdfyuiop;';lkjhgfghjkkjhgfgh",
-      technology: ["HTML", "CSS"],
-    },
-    {
-      image: project,
-      projectName: "car management",
-      description: "lorem1sdfyuiop;';lkjhgfghjkkjhgfgh",
-      technology: ["HTML", "CSS"],
-    },
-  ];
+ 
 
   return (
     <div

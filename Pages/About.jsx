@@ -2,7 +2,7 @@ import React from "react";
 import { LuDownload } from "react-icons/lu";
 import { LuChevronsLeftRight } from "react-icons/lu";
 import { GoDatabase } from "react-icons/go";
-
+import resume from '../../public/riyaFullStack.pdf';
 const About = () => {
   const technology = [
     "HTML", "CSS", "JavaScript", "React", "Node.js", "Express.js", "MongoDB"
@@ -27,7 +27,7 @@ const About = () => {
             <br /><br />
             When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge with the developer community.
           </p>
-          <a href="./src/assets/riyaFullStack.pdf" download className="inline-block">
+          <a href={resume} download className="inline-block">
                      <button className="border border-blue-700 shadow-2xl rounded-2xl flex justify-center items-center gap-2 px-6 py-3 text-blue-700 font-semibold hover:bg-linear-to-r hover:from-blue-500 hover:via-purple-500 hover:to-pink-500 hover:text-white transition duration-300 w-full sm:w-auto">
                        <LuDownload />
                        Download Resume

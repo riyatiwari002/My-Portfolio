@@ -4,8 +4,15 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { LuDownload } from "react-icons/lu";
 import { LuGithub } from "react-icons/lu";
 import { FiLinkedin } from "react-icons/fi";
-
+import resume from '../../public/riyaFullStack.pdf'
 const Home = () => {
+  const scrollToContact=()=>{
+    const element=document.querySelector("#contact");
+    if(element)
+    {
+      element.scrollIntoView({behavior:"smooth"});
+    }
+  }
   const data = {
     info: "Hi, I'm",
     role: "Full Stack Developer",
@@ -36,10 +43,10 @@ const Home = () => {
             {data.Details}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-10 mt-8">
-            <button className="border border-blue-700 shadow-2xl rounded-2xl flex justify-center items-center gap-2 px-6 py-3 text-blue-700 font-semibold  rounded-2xl flex justify-center items-center gap-2 px-6 py-3 hover:text-white font-semibold shadow-2xl hover:shadow-lg transition duration-300 w-full sm:w-auto hover:bg-linear-to-r hover:from-blue-500 hover:via-purple-500 hover:to-pink-500">
+            <button className="border border-blue-700 shadow-2xl rounded-2xl flex justify-center items-center gap-2 px-6 py-3 text-blue-700 font-semibold  rounded-2xl flex justify-center items-center gap-2 px-6 py-3 hover:text-white font-semibold shadow-2xl hover:shadow-lg transition duration-300 w-full sm:w-auto hover:bg-linear-to-r hover:from-blue-500 hover:via-purple-500 hover:to-pink-500" onClick={scrollToContact}>
               <MdOutlineMailOutline /> Hire Me
             </button>
-            <a href="./src/assets/riyaFullStack.pdf" download className="inline-block">
+            <a href={resume} download className="inline-block">
             <button className="border border-blue-700 shadow-2xl rounded-2xl flex justify-center items-center gap-2 px-6 py-3 text-blue-700 font-semibold hover:bg-linear-to-r hover:from-blue-500 hover:via-purple-500 hover:to-pink-500 hover:text-white transition duration-300 w-full sm:w-auto">
               <LuDownload />
               Download Resume

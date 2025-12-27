@@ -8,9 +8,9 @@ import { BsSend } from "react-icons/bs";
 
 const Contact = () => {
   const contactInfo = [
-    { icons: <MdOutlineMailOutline />, text: "Email", info: "riyatiwari2626@gmail.com" },
-    { icons: <LuPhone />, text: "Phone", info: "9301838148" },
-    { icons: <IoLocationOutline />, text: "Location", info: "Indore, India" },
+    { icons: <MdOutlineMailOutline />, text: "Email", info: "riyatiwari2626@gmail.com" ,href:"mailto:riyatiwari2626@gmail.com"},
+    { icons: <LuPhone />, text: "Phone", info: "9301838148",href:"tel:+919301838148" },
+    { icons: <IoLocationOutline />, text: "Location", info: "Indore, India",href:"location" },
   ];
 
   const socialMedia = [
@@ -33,10 +33,12 @@ const Contact = () => {
           <h2 className="font-semibold text-2xl">Contact Information</h2>
           {contactInfo.map((item, index) => (
             <div key={index} className="flex gap-4 items-center bg-white rounded-xl shadow-lg p-4 md:p-6 hover:scale-95 transition-transform duration-300">
-              <div className="text-2xl text-blue-700">{item.icons}</div>
+              <div className="text-2xl text-blue-700"><a href={item.href}>{item.icons}</a></div>
               <div>
-                <h4 className="font-semibold">{item.text}</h4>
+               <a href={item.href} >
+                 <h4 className="font-semibold">{item.text}</h4>
                 <p className="text-sm md:text-base">{item.info}</p>
+               </a>
               </div>
             </div>
           ))}
